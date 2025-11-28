@@ -1,0 +1,192 @@
+.listaComentarios {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.comentario {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 14px;
+    padding: 0;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.comentario:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+.comentHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.90);
+    color: #111;
+    font-weight: bold;
+    border-radius: 14px 14px 0 0;
+    padding: 0.5em 1em;
+}
+
+.comentHeader h4 {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.comentContent {
+    padding: 1em;
+    font-size: 1rem;
+    line-height: 1.55;
+    color: white;
+}
+
+.comentActions {
+    display: flex;
+    gap: 0.6em;
+    padding: 0.8em 1em;
+    margin-top: -0.6em;
+}
+
+.comentActions button {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: white;
+    font-size: 0.85rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    transition: 0.15s ease;
+}
+
+.comentActions button:hover {
+    background: rgba(255, 255, 255, 0.30);
+}
+
+.formRespuesta {
+    padding: 0.8em 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.formRespuesta textarea {
+    background: rgba(255,255,255,0.09);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: white;
+    padding: 0.7em;
+    border-radius: 6px;
+    resize: vertical;
+}
+
+.formRespuesta button {
+    align-self: flex-end;
+    padding: 6px 14px;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.35);
+    border: 1px solid rgba(255,255,255,0.25);
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+
+.formRespuesta button:hover {
+    background: rgba(255,255,255,0.55);
+}
+
+.comentario {
+    position: relative;
+}
+
+.comentario::before {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 18px;
+    width: 2px;
+    height: calc(100% - 18px);
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.comentario[nivel]::before {
+    opacity: 1;
+}
+
+.formComentario {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.18);
+    padding: 1.2em;
+    border-radius: 14px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.formComentario textarea {
+    width: auto;
+    min-height: 80px;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 0.8em;
+    color: white;
+    border-radius: 10px;
+    resize: vertical;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: 0.2s ease;
+}
+
+.formComentario textarea:focus {
+    outline: none;
+    border-color: rgba(255,255,255,0.45);
+    background: rgba(255,255,255,0.16);
+}
+
+.formComentario button {
+    align-self: flex-end;
+    padding: 0.6em 1.4em;
+    font-size: 0.95rem;
+    background: rgba(255,255,255,0.25);
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.formComentario button:hover {
+    background: rgba(255,255,255,0.45);
+    transform: translateY(-1px);
+}
+
+.formComentario button:active {
+    transform: translateY(1px);
+}
+
+.loginToComen{
+    color: white;
+}
+
+.btnLike{
+    background-color: rgb(211, 211, 211);
+    border: none;
+    border-radius: 4px;
+    padding: 0.3em;
+    transition: 0.2s;
+}
+
+.btnLike:hover{
+    background-color: rgb(167, 167, 167);
+    cursor: pointer;
+}

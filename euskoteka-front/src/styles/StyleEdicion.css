@@ -1,0 +1,73 @@
+.adminPanel {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.adminPanel-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.adminPanel label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #d1e0ff;
+  margin-bottom: 0.5rem;
+}
+
+.adminPanel input,
+.adminPanel textarea {
+  margin-top: 0.3rem;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #888;
+  background-color: #1f1f1f;
+  color: white;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.adminPanel input:focus,
+.adminPanel textarea:focus {
+  border-color: #4da3ff;
+  box-shadow: 0 0 5px rgba(77, 163, 255, 0.7);
+}
+
+.adminPanel textarea {
+  resize: vertical;
+  height: 200px;
+}
+
+.adminPanel button,
+.adminPanel-button {
+  background-color: #0066ff;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: bold;
+  width: fit-content;
+  transition: background-color 0.2s, transform 0.15s;
+}
+
+.adminPanel button:hover,
+.adminPanel-button:hover {
+  background-color: #0052cc;
+  transform: translateY(-2px);
+}
+
+.adminPanel button:disabled {
+  background-color: #4c4c4c;
+  cursor: not-allowed;
+}

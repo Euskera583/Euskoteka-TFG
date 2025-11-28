@@ -1,0 +1,152 @@
+/* estilos de escritorio */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to bottom, #00ab64, #007aab);
+  padding: 0 2em;
+  position: relative;
+}
+
+.header-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.estiloNombreUser{
+  margin-right: 1em;
+  font-size: 20px;
+}
+
+.logo{
+  height: 110px;
+  position: absolute;
+  left: 1.5em;
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 1.5));
+}
+
+.logo:hover{
+  cursor: pointer;
+}
+
+.listaHeader {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  list-style: none;
+  padding: 1em;
+}
+
+.listaHeader a {
+  text-decoration: none;
+  font-size: 130%;
+  color: white;
+  padding: 0.2em;
+
+  background: linear-gradient(to bottom, #005dff, #00b7ff);
+  border: solid white 2px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 9px 4px rgba(255, 255, 255, 0.7);
+  transition: 0.2s;
+}
+
+.listaHeader a:hover {
+  box-shadow: 0px 0px 11px 6px rgba(255, 255, 255, 1);
+}
+
+.btnHeader{
+  font-size: 100%;
+  color: black;
+  padding: 0.2em;
+
+  background: white;
+  border: solid white 2px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 9px 4px rgba(255, 255, 255, 0.7);
+  transition: 0.2s;
+}
+
+.btnHeader:hover {
+  box-shadow: 0px 0px 11px 6px rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none; /* solo aparece en móvil */
+}
+
+.menu-movil {
+  display: none; /* oculto por defecto */
+}
+
+
+/* estilos de movil */
+
+@media (max-width: 768px) {
+
+  header {
+    padding: 0.5em 1em;
+  }
+
+  .header-right{
+    display: none;
+  }
+
+  .logo {
+    position: static;
+    margin: 0 auto;
+    height: 80px;
+  }
+
+  .lista-escritorio {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 2000;
+  }
+
+  /* menu desplegable */
+  .menu-movil {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 70%;
+    transition: right .3s ease;
+
+    background: rgba(0,0,0,0.8);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-left: 2px solid white;
+    display: none;
+    
+  }
+
+  .menu-movil.abierto {
+    display: flex;
+  }
+
+  .menu-movil a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+
+}

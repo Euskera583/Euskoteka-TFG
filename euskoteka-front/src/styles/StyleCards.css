@@ -1,0 +1,128 @@
+/* modo esxcritorio */
+
+.ConjuntoTarjetas {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  gap: 1em;
+  padding: 1em;
+}
+
+
+.card {
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  box-shadow: 0px 0px 9px 4px rgba(255, 255, 255, 0.7);
+
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.7);
+  transform: scale(1.02);
+}
+
+.cardMultimedia {
+  display: flex;
+  flex-direction: column;
+  background-color: #ccc;
+  border-radius: 8px;
+  padding: 1em;
+  gap: 1em;
+  width: auto;
+  max-width: 700px;
+}
+
+.cardMultimedia img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: 6px;
+}
+
+.imagenMultimedia {
+  height: 300px;
+  width: 100%;
+  object-fit: contain;
+  background-color: #e0e0e0;
+  display: block;
+}
+
+.fotoListadoSesion {
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #cdcdcd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fotoListadoSesion img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+
+
+.textoListadoSesion {
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.bloqueFoto {
+  width: 100%;
+  overflow: hidden;
+  background-color: #cdcdcd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bloqueFoto img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.bloqueTexto {
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* modo movil */
+
+@media (max-width: 768px) {
+  .ConjuntoTarjetas {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  }
+
+  .fotoListadoSesion {
+    height: auto !important;
+    overflow: visible !important;
+    background-color: transparent !important;
+    display: block !important;
+  }
+
+  .fotoListadoSesion img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+
+    max-height: 100% !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+  }
+}

@@ -1,0 +1,19 @@
+.contentArtConcreto{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.contentArtConcreto h1 {
+    margin-bottom: 1em;
+}
+
+.contentArtConcreto p {
+    margin-bottom: 1em;
+    font-size: 110%;
+}
+
+#fotoArt{
+    width: 70%;
+}
+

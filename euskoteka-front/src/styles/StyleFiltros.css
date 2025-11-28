@@ -1,0 +1,316 @@
+.filtros {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2em;
+  background: #ffffff;
+  padding: 1.5em;
+  border-radius: 12px;
+  height: 70vh;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  color: #333;
+}
+
+
+.opcionesFiltroAnio,
+.opcionesFiltroDj,
+.opcionesFiltroDiscoteca {
+  background: #f4f6f8;
+  border-radius: 10px;
+  padding: 0.8em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  border: 1px solid #e1e1e1;
+}
+
+
+.opcionesFiltroAnio h3,
+.opcionesFiltroDj h3,
+.opcionesFiltroDiscoteca h3 {
+  margin: 0 0 0.5em 0;
+  color: #ff7b00;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+
+.opcionesFiltroAnio label,
+.opcionesFiltroDj label,
+.opcionesFiltroDiscoteca label {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border: 1px solid #ddd;
+}
+
+.opcionesFiltroAnio label:hover,
+.opcionesFiltroDj label:hover,
+.opcionesFiltroDiscoteca label:hover {
+  background-color: #f0f0f0;
+  border-color: #c9c9c9;
+}
+
+.opcionesFiltroAnio input[type="checkbox"],
+.opcionesFiltroDj input[type="checkbox"],
+.opcionesFiltroDiscoteca input[type="checkbox"] {
+  accent-color: #ff8800;
+  transform: scale(1.1);
+}
+
+
+label[style*="none"] {
+  display: none !important;
+}
+
+input:disabled + span {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+
+.btnBorraFiltro {
+  background-color: #ff951c;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7em;
+  width: 100%;                
+  display: block;             
+  text-align: center;         
+  font-weight: bold;        
+  margin-top: 1em;          
+  transition: 0.2s;
+}
+
+.btnBorraFiltro:hover{
+  cursor: pointer;
+  background-color: white;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1.5));
+}
+
+/* FILTROS CANCIONES */
+
+.filtrosCanciones {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  background: #ffffff;
+  padding: 1.5em;
+  border-radius: 12px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.15);
+  color: #333;
+  max-width: 800px;
+}
+
+.filtrosCanciones-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2em;
+}
+
+.filtroBloque {
+  background: #f4f6f8;
+  border-radius: 10px;
+  padding: 0.8em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  overflow-y: auto;
+  max-height: 45vh;
+  border: 1px solid #e1e1e1;
+}
+
+.filtroBloque h3 {
+  margin: 0 0 0.5em 0;
+  color: #ff7b00;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.filtroBloque label {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border: 1px solid #ddd;
+}
+
+.filtroBloque label:hover {
+  background-color: #f0f0f0;
+  border-color: #c9c9c9;
+}
+
+.filtroBloque input[type="checkbox"] {
+  accent-color: #ff8800;
+  transform: scale(1.1);
+}
+
+.inputBusquedaNombre {
+  padding: 0.6em;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.btnBorraFiltro {
+  background-color: #ff951c;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7em;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1em;
+  transition: 0.2s;
+}
+
+.btnBorraFiltro:hover {
+  cursor: pointer;
+  background-color: white;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1.5));
+}
+
+@media (max-width: 768px) {
+
+  .filtros {
+    grid-template-columns: 1fr;
+    height: auto;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 1em;
+    gap: 1em;
+  }
+
+  .opcionesFiltroAnio,
+  .opcionesFiltroDj,
+  .opcionesFiltroDiscoteca {
+    max-height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding: 1em;
+    border-radius: 12px;
+  }
+
+  .opcionesFiltroAnio h3,
+  .opcionesFiltroDj h3,
+  .opcionesFiltroDiscoteca h3 {
+    text-align: center;
+    margin-bottom: 0.7em;
+  }
+
+  /* FILTROS CANCIONES */
+
+  .filtrosCanciones {
+    padding: 1em;
+    gap: 1em;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .filtrosCanciones-row {
+    grid-template-columns: 1fr;
+  }
+
+  .filtroBloque {
+    max-height: 150px;
+    padding: 1em;
+  }
+
+  .filtroBloque h3 {
+    text-align: center;
+    margin-bottom: 0.7em;
+  }
+
+}
+
+.filtrosDiscotecasContainer {
+    display: flex;
+    align-items: flex-end;
+    gap: 1em;
+    padding: 1.2em 1.4em;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+    flex-wrap: wrap;
+}
+
+.filtroItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+}
+
+
+.filtroItem label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #444;
+    margin-left: 2px;
+}
+
+.filtroItem input,
+.filtroItem select {
+    padding: 0.55em 0.9em;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #ffffff;
+    font-size: 0.95rem;
+    min-width: 180px;
+    transition: 0.2s ease;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.filtroItem input:focus,
+.filtroItem select:focus {
+    border-color: #ff951c;
+    box-shadow: 0 0 6px rgba(255, 149, 28, 0.35);
+    outline: none;
+}
+
+.btnFiltroReset {
+    background-color: #ff951c !important;
+    padding: 0.7em 1.2em !important;
+    border-radius: 8px !important;
+    color: white !important;
+    font-weight: bold !important;
+    transition: 0.2s ease;
+}
+
+.btnFiltroReset:hover {
+    cursor: pointer;
+    background-color: #ffa83f !important;
+}
+
+@media (max-width: 768px) {
+    .filtrosDiscotecasContainer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filtroItem input,
+    .filtroItem select {
+        width: 100%;
+    }
+
+    .btnFiltroReset {
+        width: 100%;
+        margin-top: 0.5em;
+    }
+}

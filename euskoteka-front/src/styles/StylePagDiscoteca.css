@@ -1,0 +1,162 @@
+.fondoDiscotecaConcreta {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 2em;
+}
+
+.bloqueConcretoCabeceraDiscoteca {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.bloqueConcretoTextoDiscoteca {
+  flex: 1.3;
+  min-width: 300px;
+}
+
+.bloqueConcretoFotoDiscoteca {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  min-width: 250px;
+  gap: 2em;
+}
+
+.bloqueConcretoFotoDiscoteca img {
+  width: 100%;
+  max-width: 320px;
+  border: solid rgb(255, 255, 255) 3px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 9px 4px rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.5em;
+}
+
+.markdown-body {
+  white-space: pre-line;
+}
+
+.markdown-body a {
+  color: rgb(255, 84, 84);
+}
+
+.markdown-body a:hover {
+  color: red;
+  transition: 0.3s;
+}
+
+/* Estilos para tabla residencias */
+
+.tablaResidencias {
+  padding: 2em;
+  overflow-x: auto;
+  color: white;
+}
+
+.tablaResidencias table {
+  width: 100%;
+  border-collapse: collapse;
+  border: solid 1px white;
+}
+
+.tablaResidencias th,
+.tablaResidencias td {
+  padding: 0.5em;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+@media (max-width: 768px){
+
+  .bloqueConcretoFotoDiscoteca{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+}
+
+
+
+
+
+
+
+
+.panel-crear-disco {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 15px;
+    border: 2px solid #444;
+}
+
+.panel-crear-disco h2{
+  color: white;
+}
+
+.panelCampos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.panelCampos label {
+    color: white;
+}
+
+.panelCampos input,
+.panelCampos select,
+.panelCampos textarea {
+    width: 100%;
+}
+
+.panelBotones {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Primer botón: Guardar */
+.panelBotones > *:first-child {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.panelBotones > *:first-child:hover{
+  transform: translateY(-2px);
+  background-color: #24c529;
+}
+
+/* Segundo botón: Cancelar */
+.panelBotones > *:last-child {
+    background-color: #d32f2f;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.panelBotones > *:last-child:hover{
+  transform: translateY(-2px);
+  background-color: #d31010;
+}
+
+
+
+

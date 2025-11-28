@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+#app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+
+}
+
+.fondoNegro {
+  background-color: rgba(0, 0, 0, 0.7);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+body {
+  background-image: url(../media/fondo.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* infoElementoConcreto es el texto del markdown
+en DiscotecaConcreta
+
+en SesionCOncreta es el texto de la info y dueño de sesion*/
+
+
+.infoElementoConcreto {
+  padding: 0.3em;
+}
+
+.infoElementoConcreto img {
+  max-width: 45%;
+  height: auto;
+  margin: 0.5em 1em;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
+
+  border: solid 2px rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+}
+
+/* ------------------ */
+
+/* estilo foto periodico the sound derecha */
+.infoElementoConcreto img.right {
+  float: right;
+  margin-left: 1em;
+}
+
+/* estilo cartel sonic youth txitxarro derecha */
+.infoElementoConcreto img.rightYouth {
+  float: right;
+  margin-left: 1em;
+  width: 30%;
+}
+
+/* estilo foto bomba en txitxarro derecha */
+.infoElementoConcreto img.rightBombTxi {
+  float: right;
+  margin-left: 1em;
+}
+
+/* estilo ultima fiesta txitxarro derecha */
+.infoElementoConcreto img.rightFiestaEndTxi {
+  float: right;
+  margin-left: 1em;
+}
+
+/* estilo ultima fiesta txitxarro derecha */
+.infoElementoConcreto img.rightFlyerJazz {
+  float: right;
+  margin-left: 1em;
+  width: 40%;
+}
+
+/* estilo cartel apertura matraka derecha */
+.infoElementoConcreto img.rightAperMTKR {
+  float: right;
+  margin-left: 1em;
+  width: 20%;
+}
+
+/* estilo fotos cintas matraka derecha */
+.infoElementoConcreto img.rightFotoMTKR {
+  float: right;
+  margin-left: 1em;
+  width: 100%;
+}
+
+/* estilo fotos cintas matraka derecha */
+.infoElementoConcreto img.rightFotoMTKR98 {
+  float: right;
+  margin-left: 1em;
+  width: 28%;
+}
+
+/* estilo caratula vol 14 sound derecha */
+.infoElementoConcreto img.rightVol14 {
+  float: right;
+  margin-left: 1em;
+  width: 40%;
+}
+
+/* ------------- */
+.infoElementoConcreto img.center {
+  display: block;
+  margin: 1.5em auto;
+  float: none;
+  max-width: 60%;
+}
+
+.infoElementoConcreto img.all {
+  display: block;
+  width: 100%;
+  margin: 1em 0;
+  float: none;
+}
+
+.infoElementoConcreto::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.infoElementoConcreto h2 {
+  font-size: 120%;
+  max-width: 800px;
+}
+
+#h1NombreElemento {
+  font-size: 180%;
+}
+
+
+/* Estilos modal */
+
+.btnModalClosed {
+  display: none;
+}
+
+
+
+.modalContent {
+  display: inline-block;
+  background: #ccc;
+  border-radius: 8px;
+  padding: 1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modalContainerClosed {
+  display: none;
+}
+
+.modalContainerOpen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99999;
+}
+
+.btnCierraModal {
+  background-color: rgb(236, 236, 236);
+  border: none;
+  border-radius: 5px;
+  padding: 0.7em;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1em;
+  transition: 0.2s;
+}
+
+.btnCierraModal:hover {
+  cursor: pointer;
+  background-color: white;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1.5));
+}
+
+.contCargarMas{
+  text-align: center;
+  margin: "20px 0";
+}
+
+.btnCargarMas {
+  background: #7a00ff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.crearElemenContainer {
+    width: 100%;
+    margin: 1em 0;
+}
+
+.btnCrear {
+    width: 100%;
+    padding: 0.6em;
+    font-size: 1rem;
+    background-color: #009400;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.btnCrear:hover {
+  transform: translateY(-2px);
+    background-color: #00a800;
+    cursor: pointer;
+    filter: drop-shadow(0 0 8px rgba(0,201,0,0.5));
+}
+
+.btnCargarMas:hover {
+  background: #5c00c0;
+}
+
+
+.modalVerifica h1 {
+  color: green;
+}
+
+.botonVistaFlotante {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 9999;
+}
+
+.btnVistaModo {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.btnVistaModo:hover {
+  background-color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+/* home */
+
+.pagHome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.logoCompleto {
+  height: 39em;
+}
+
+.contenedorHomeTexto {
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: inline-block;
+  width: 45%;
+  max-width: none;
+}
+
+.btnFiltrosFlotante :first-child{
+    width: 100%;
+  }
+
+.noCarga{
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .btnCargarMas {
+    width: 100%;
+  }
+
+  .logoCompleto {
+    max-height: 250px;
+    width: auto;
+    margin: 1rem auto;
+  }
+
+  .contenedorHomeTexto {
+    width: 90%;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .contenedorHomeTexto h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .contenedorHomeTexto p {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .btnFiltrosFlotante :first-child{
+    width: 100%;
+  }
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 1em;
+}
